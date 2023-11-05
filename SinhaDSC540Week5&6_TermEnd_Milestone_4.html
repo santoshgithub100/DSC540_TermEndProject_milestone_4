@@ -14700,7 +14700,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <span class="k">def</span> <span class="nf">Find_Duplicates</span><span class="p">(</span><span class="n">dfData</span><span class="p">):</span>
 
-    <span class="n">dfData</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+    <span class="n">dfData</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
     <span class="c1"># To find duplicates on specific column 'procurement_id'</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"dfData.duplicated column 'procurement_id' "</span><span class="p">,</span> <span class="n">dfData</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">'procurement_id'</span><span class="p">]))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"dfData.duplicated column 'project_name' "</span><span class="p">,</span> <span class="n">dfData</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">'project_name'</span><span class="p">]))</span>
@@ -14838,7 +14838,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <span class="n">dfData</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"df.columns lower case :"</span><span class="p">,</span> <span class="n">dfData</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
   
-    <span class="nb">print</span><span class="p">(</span><span class="n">dfData</span><span class="p">)</span>
+    <span class="c1">#print(dfData)</span>
 
     <span class="c1">### Format data into a more readable format</span>
     <span class="n">dfData</span> <span class="o">=</span> <span class="n">Format_Data_Readable_Format</span><span class="p">(</span><span class="n">dfData</span><span class="p">)</span>
@@ -14893,33 +14893,6 @@ df.columns remove spaces : Index([&#39;procurement_id&#39;, &#39;project_name&#3
 df.columns lower case : Index([&#39;procurement_id&#39;, &#39;project_name&#39;, &#39;vendor_name&#39;, &#39;payment_date&#39;,
        &#39;proper_invoice_received_date&#39;],
       dtype=&#39;object&#39;)
-      procurement_id  project_name                          vendor_name  \
-1         EQ75470483  R.076458.002   PROTECK ROOFING &amp; SHEET METAL INC.   
-2         EQ75450756  R.012641.001                 THE STATE GROUP INC.   
-3           EF171366  R.079823.001              CONSTRUCTION SOCAM LTEE   
-4         EP75651517  R.009790.328   ACME FUTURE SECURITY CONTROLS INC.   
-5         EP75051699  R.029435.327   ACME FUTURE SECURITY CONTROLS INC.   
-...              ...           ...                                  ...   
-28184     EJ19680241  R.064594.556        BAXTEC MANAGEMENT CORPORATION   
-28185      700697603  R.065220.887       ARTHUR YVON GENERAL CONTRACTOR   
-28186     EJ19622224  R.064595.391          PRECISE FIRE PROTECTION INC   
-28187     EJ19690410  R.064594.523  CHUBB EDWARDS A UTC FIRE &amp; SECURITY   
-28188     EJ19690410  R.064594.524  CHUBB EDWARDS A UTC FIRE &amp; SECURITY   
-
-      payment_date proper_invoice_received_date  
-1       2017-05-10                   2017-03-17  
-2       2017-05-02                   2017-04-06  
-3       2017-05-02                   2017-04-06  
-4       2017-05-05                   2017-04-11  
-5       2017-05-09                   2017-04-13  
-...            ...                          ...  
-28184   2023-10-24                   2023-10-23  
-28185   2023-10-24                   2023-10-12  
-28186   2023-10-24                   2023-10-18  
-28187   2023-10-24                   2023-10-18  
-28188   2023-10-24                   2023-10-18  
-
-[28188 rows x 5 columns]
 dtypes  procurement_id                  object
 project_name                    object
 vendor_name                     object
